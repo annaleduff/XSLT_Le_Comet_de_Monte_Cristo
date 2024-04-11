@@ -86,7 +86,7 @@
     <xsl:variable name="footer">
         <footer>
             <p><i><xsl:value-of select="//fileDesc/titleStmt/respStmt"/>. <a href="https://github.com/annaleduff/TEI_Le-Comte-de-Monte-Cristo_M2TNAH">Consulter l'encodage
-                XML</a></i></p>
+                XML TEI</a> et <a href="https://github.com/annaleduff/XSLT_Le_Comet_de_Monte_Cristo/tree/main"> Consultez la transformation XSLT.</a></i></p>
         </footer>
     </xsl:variable>
     
