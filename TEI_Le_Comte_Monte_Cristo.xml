@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-model href="out/RNG_Le_comte_de_Monte_Cristo.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="out/RNG_Le_comte_de_Monte_Cristo.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
+
+
+<teiCorpus version="3.3.0" xmlns="http://www.tei-c.org/ns/1.0">
+
+   <teiHeader>
+      
+      
+      <fileDesc>
+          <!--Titre et nom de l'auteur-->   
+         <titleStmt>
+            <title level="m" >Le Comte de Monte-Cristo</title>
+            <author ref="https://catalogue.bnf.fr/ark:/12148/cb41405422x">
+               <forename>Alexandre</forename>
+               <surname>Dumas</surname>
+            </author>
+             <!--Informations sur l'édition du document encodé--> 
+            <respStmt>
+               <resp>Encodage réalisé pour l'évaluation du cours de XML TEI du Master 2 TNAH.</resp>
+               <name>
+                  Anna Le Duff
+               </name>
+            </respStmt>
+         </titleStmt>
+          <!-- Informations sur la publication/distribution du document encodé -->
+          <publicationStmt>
+             <publisher ref="https://github.com/annaleduff/TEI_Le-Comte-de-Monte-Cristo_M2TNAH">Repository GitHub sur lequel le devoir a été séposé en ligne.</publisher>
+              <pubPlace>
+                  <location>
+                      <country key="FR"/>
+                      <settlement type="city">Paris</settlement>
+                  </location>
+              </pubPlace>
+              <date when-iso="2023-02">Février 2024</date>
+              <availability status="free">
+                  <p>Librement disponible dans un cadre de recherche ou d'enseignement.</p>
+              </availability>
+          </publicationStmt>
+          <!-- Informations concernant la source dont est issue l'encodage -->
+         <sourceDesc>
+            <biblFull>
+               <titleStmt>
+                  <title>Le Comte de Monte-Cristo</title>
+                  <author ref="https://catalogue.bnf.fr/ark:/12148/cb41405422x">
+                     <forename>Alexandre</forename>
+                     <surname>Dumas</surname>
+                  </author>
+               </titleStmt>
+               <publicationStmt level="m">
+                  <publisher>Journal des débats politiques et littéraires</publisher>
+                  <pubPlace>
+                     <address>
+                        <country key="FR"/>
+                        <settlement type="city">Paris</settlement>
+                        <postCode>75000</postCode>
+                     </address>
+                  </pubPlace>
+                  <date when-iso="1844">1844</date>
+                     <distributor ref="https://gallica.bnf.fr/html/und/presse-et-revues/le-comte-de-monte-cristo?mode=desktop">Gallica
+                     Bibliothèque nationale de France</distributor>
+                  <availability>
+                     <licence
+                        target="https://gallica.bnf.fr/edit/und/conditions-dutilisation-des-contenus-de-gallica"
+                        >Domaine public</licence>
+                  </availability>
+               </publicationStmt>
+               <seriesStmt>
+                  <title>Le Comte de Monte-Cristo</title>
+                  <biblScope unit="book">Le Comte de Monte-Crsto</biblScope>
+                  <biblScope unit="part">Première partie</biblScope>
+                  <biblScope unit="chapter">I à III</biblScope>         
+               </seriesStmt>
+            </biblFull> 
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <creation>
+            <date when-iso="1844">1844</date>
+            <country key="FR">France</country>
+            <lang xml:lang="fr"/>
+         </creation>
+        
+         <listObject>
+         <object xml:id="pharaon" type="ship">
+            <objectIdentifier>
+               <objectName>Le Pharaon</objectName>
+               <country>France</country>
+               <settlement>Marseille</settlement>
+            </objectIdentifier>
+            <physDesc>
+               <p> Le Pharaon est un trois-mats. </p>
+            </physDesc>
+            <note>Navire marchand sur lequel Edmond Dantès est le second puis capitaine. Il appartenant à l'armateur Pierre Morrel.</note> 
+         </object>
+         </listObject>
+         
+         <settingDesc>
+            <listPlace xml:id="ville_de_marseille">
+               
+               <place xml:id="marseille" type="city">
+                  <placeName>
+                     <name>Marseille</name>
+                     
+                     <address>
+                        <country key="FR"/>
+                        <settlement type="city"/>
+                        <postCode>13000</postCode>
+                     </address>
+                  </placeName>
+                  <note>La principale ville française du littoral méditerranéen de Provence. </note>
+               </place>
+
+               <place xml:id="notredamedelagarde" type="fortress">
+                  <placeName>
+                     <name>Notre-Dame-de-la-Garde</name>
+                     <address>
+                        <country key="FR"/>
+                        <settlement type="city">Marseille</settlement>
+                        <postCode>13006</postCode>
+                     </address>
+                  </placeName>
+                  <note>Le Fort Notre-Dame est construit après 1536 sur l’ordre de François Ier. Il devint le site constitutif de la Basilique Notre-Dame-de-la-Garde, dont la construction débute en 1853 (le Comte de Monte_Cristo est publié en 1844). </note>
+               </place>
+               
+               <place xml:id="chateaudif" type="fortress">
+                  <placeName>
+                     <name>Chateau d'If</name>
+                     <address>
+                        <country key="FR"/>
+                        <settlement type="city">Marseille</settlement>
+                     </address>
+                  </placeName>
+                  <note>Le château d'If est une forteresse française édifiée sur les ordres du roi François Ier, entre 1527 et 1529 sur l'îlot d'If de l'archipel du Frioul, au centre de la rade de Marseille. Il a essentiellement servi de prison pendant ses 400 ans d'utilisation officielle.C'est dans cette prison que <persName ref="#Edmond Dantès">Edmond Dantès</persName> est enfermé pendant 14 ans.</note>
+               </place>
+               
+               <place xml:id="capmorgiou" type="place">
+                  <placeName>
+                     <name>Cap de Morgiou</name>
+                     <addName>Cap Morgiou</addName>
+                     <address>
+                        <country key="FR"/>
+                        <settlement type="city">Marseille</settlement>
+                     </address>
+                  </placeName>
+                  <note>Le cap Morgiou est un cap de France situé dans le massif des Calanques, à Marseille. </note>
+               </place>
+               
+              
+               <place xml:id="ileriou" type="island">
+                  <placeName>
+                     <name>Ile de Rion</name>
+                     <addName>Ile de Riou</addName>
+                     <address>
+                        <country key="FR"/>
+                        <settlement type="city">Marseille</settlement>
+                     </address>
+                  </placeName>
+                  <note>L'île de Riou est une île française inhabitée, située au sud de Marseille, au large du massif des Calanques ; elle constitue l'extrémité sud de la commune de Marseille. </note>
+               </place>
+               
+               <place xml:id="ilecalasareigne" type="island">
+                  <placeName>
+                     <name>Ile de Calasareigne</name>
+                     <address>
+                        <country key="FR"/>
+                        <settlement type="city">Marseille</settlement>
+                     </address>
+                  </placeName>
+                  <note>L’île Calseraigne ou île Plane est une île française inhabitée, dans l'archipel de Riou, au sud de Marseille.</note>
+               </place>
+               
+               <place xml:id="ilejaros" type="island">
+                  <placeName>
+                     <name>Ile de Jaros</name>
+                     <addName>Ile de Jarre</addName>
+                     <addName>Ile de Jaron</addName>
+                     <address>
+                        <country key="FR"/>
+                        <settlement type="city">Marseille</settlement>
+                     </address>
+                  </placeName>
+                  <note>Les îles de Jarre et Jarron se situent dans l'archipel de Riou au Sud du massif de Marseilleveyre. Si elles apparaissent visuellement comme une seule entité, les deux îles sont en réalité séparées par un bras de mer de tout juste 1 mètre de large. Les îles de Jarron (à l'Ouest) et Jarre (à l'Est). Comme pour leur voisine l'<placeName ref="#ilecalasareigne"> île de Calseraigne</placeName>, elles ont longtemps été utilisées pour y stocker les marchandises à risque en transit vers la ville de Marseille.</note>
+               </place>
+               
+               <place xml:id="ilepomègues" type="island">
+                  <placeName>
+                     <name>Ile de Pomègues</name>
+                     <address>
+                        <country key="FR"/>
+                        <settlement type="city">Marseille</settlement>
+                     </address>
+                  </placeName>
+                  <note>L'île de Pomègues est une île de l'archipel du Frioul qui comprend aussi l'île de Ratonneau et l'île du <placeName ref="#chateaudif">château d'If</placeName>. L’anse de Pomègues était un lieu de quarantaine pour les voyageurs maritimes voulant débarquer à Marseille jusqu'au XIXe siècle, notamment afin de lutter contre les ravages de la peste à Marseille. </note>
+               </place>
+               
+               <place xml:id="fortsaintjean" type="fortress">
+                  <placeName>
+                     <name>Fort Saint-Jean</name>
+                     <address>
+                        <country key="FR"/>
+                        <settlement type="city">Marseille</settlement>
+                     </address>
+                  </placeName>
+                  <note>Le fort Saint-Jean est une construction militaire située à Marseille. Il est placé sur un éperon qui borde l'entrée du Vieux-Port. </note>
+               </place>
+               
+               <place xml:id="reserve" type="inn">
+                  <placeName>
+                     <name>La Reserve</name>
+                     <address>
+                        <country key="FR"/>
+                        <settlement type="city">Marseille</settlement>
+                     </address>
+                  </placeName>
+                  <note>La Reserve est une auberge très populaire située sur le Vieux-Port de Marseille. Connue pour servir la "meilleure bouillabaisse de Marseille", selon Alexandre Dumas, il en fait le lieu de réception pour le repas de fiançailles d'<persName ref="#edmond_dantes">Edmond Dantès</persName> et de Mercedes.</note>
+               </place>
+               
+            </listPlace>
+            
+            <listPlace xml:id="autres_lieux">
+               <place xml:id="smyrne" type="city">
+                  <placeName>
+                     <name>Smyrne</name>
+                     <addName>Iznir</addName>
+                     <address>
+                        <country key="TR">Turkey</country>
+                        <settlement type="city" />
+                        <region>Aegean</region>
+                     </address>
+                     
+                  </placeName>
+                  <note>Izmir, traditionnellement appelée Smyrne est une ville portuaire de Turquie, située sur la mer Égée près du golfe d'Izmir. </note>
+               </place>
+
+               <place xml:id="trieste" type="city">
+                  <placeName>
+                     <name>Trieste</name>
+                     <address>
+                        <country key="IT"/>
+                        <settlement type="city">Trieste</settlement>
+                        <region>Friuli-Venezia Giulia</region>
+                     </address>
+                  </placeName>
+                  <note>Trieste est une ville italienne située au pied des Alpes dinariques sur la mer Adriatique au bord du golfe de Trieste et de la baie de Muggia.</note>
+               </place>
+               
+               <place xml:id="naples" type="city">
+                  <placeName>
+                     <name>Naples</name>
+                     <address>
+                        <country key="IT"/>
+                        <settlement type="city">Naples</settlement>
+                        <region>Friuli-Venezia Giulia</region>
+                     </address>
+                  </placeName>
+                  <note>Naples se trouve au sud-ouest de l'Italie, à une altitude de 17 m sur la côte du golfe de Naples. Située au bord de la mer, Naples a depuis longtemps été un carrefour méditerranéen incontournable. </note>
+               </place>
+               
+               <place xml:id="espagne" type="country">
+                  
+                  <placeName>
+                     <name>Espagne</name>
+                     <address>
+                        <country key="ES"/>
+                        <settlement>none</settlement>
+                     </address>
+                  </placeName>
+                  <note>Pays situé au sud de la France. C'est de ce pays que sont originaires les Catalans, peuple dont fait partie Mercedes, la fiancée de <persName ref="#edmond_dantes">Edmond Dantès</persName>.</note>
+               </place>
+               
+               
+
+            </listPlace>
+         </settingDesc>
+         <particDesc>
+            <listPerson>
+
+               <person xml:id="edmond_dantes" sex="male">
+                  <persName>
+                     <forename>Edmond</forename> 
+                     <surname>Dantès</surname>
+                     <addName>Numéro 34</addName>
+                     <addName>Comte de Monte-Cristo</addName>
+                     <addName>Abbé Busoni</addName>
+                     <addName>Lord Wilmore</addName>
+                     <addName>Sinbad le marin</addName>
+                  </persName>
+                  <note>Edmond Dantès est le héros du roman. Il a 19 ans quand l'histoire commence. Il est le second sur le <ref target="#pharaon">Le Pharaon</ref>. Edmond Dantès adopte différentes identités tout au long de l'histoire.</note>
+               </person>
+
+            
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <p>Cet encodage a été réalisé à partir de la numérisation disponible sur Gallica du
+            roman-feuilleton Le Comte de Monte-Cristo, écrit par Alexandre Dumas en 1844, et publié 
+            dans le feuilleton du Journal des débats, en première page, entre le 28 août 1844 et le 15 
+            janvier 1846. 
+            Le texte a été transcrit fidèlement, à l'exception des notes de bas page ainsi que la 
+            structure typographique en plusieurs colonnes, cette dernière n'étant pas comprise dans ce 
+            projet d'encodage.</p>
+      </encodingDesc>
+   </teiHeader>
+   <TEI xmlns="http://www.tei-c.org/ns/1.0">
+      <teiHeader>
+         <fileDesc>
+            <titleStmt>
+               <title type="full">
+                  <title type="book">Le Comte de Monte-Cristo</title>
+                  <title type="chapter"><placeName ref="#marseille">Marseille</placeName>. – L’arrivée</title>
+               </title>
+            </titleStmt>
+            <publicationStmt>
+               <publisher>Ecole nationale des chartes</publisher>
+               <date when-iso="2023-02">Février 2023</date>
+            </publicationStmt>
+            <sourceDesc>
+               <publisher>Journal des débats politiques et littéraires</publisher>
+               <date when-iso="1844-08-28">28 aout 1844</date>
+               <distributor ref="https://gallica.bnf.fr/ark:/12148/bpt6k446668c/f1.image">Gallica
+                  Bibliothèque nationale de France</distributor> 
+            </sourceDesc>
+         </fileDesc>
+      </teiHeader>
+   <text>
+      <body>
+         <div1 type="book">
+            <head>LE COMTE DE MONTE-CHRISTO.</head>
+               <div2 type="chapter" n="1">
+                  <head> <placeName ref="#marseille">Marseille</placeName>. – L’arrivée.</head>
+                  <p>Le 2 février 1815, la vigie de <placeName ref="#notredamedelagarde">Notre-Dame-de-la-Garde</placeName>
+                     signala le trois-mats <ref target="#pharaon">Le Pharaon</ref>, venant de <placeName ref="#smyrne">Smyrne</placeName>, <placeName ref="#trieste">Trieste</placeName>
+                     et <placeName ref="#naples">Naples</placeName>. Comme d’habitude, un pilote côtier partit aus-
+                     sitot du port, rasa le <placeName ref="#chateaudif">château d’If</placeName> et alla aborde le na-
+                     vire entre le <placeName ref="#capmorgiou">cap de Morgiou</placeName> et l’<placeName ref="ileriou">île de Rion</placeName>. Aussitôt, 
+                     comme d’habitude encore, la plate-forme du <placeName ref="#fortsaintjean">fort Saint-
+                     Jean</placeName> s’était couverte de curieux ; car c’est toujours une
+                     grande affaire à <placeName ref="#marseille">Marseille</placeName> que l’arrivée d’un bâtiment, sur-
+                     tout, quand ce bâtiment, comme <ref target="#pharaon">Le Pharaon</ref>, a été cons-
+                     truit, gréé , arrimé sur les chantiers de la <placeName ref="#marseille">vieille Phocée</placeName>
+                     et appartient à un armateur de la ville.</p>
+
+                  <p>Cependant le bâtiment s’avançait ; il avait heureusement
+                     franchi le détroit que quelque secouse volcanique a creusé
+                     entre l’<placeName ref="#ilecalasareigne">île de Calasareigne</placeName> et l’<placeName ref="#ilejaros">île de Jaros</placeName>;  il avait doublé
+                     <placeName ref="#ilepomègues">Pomègue</placeName>, et il s’avançait sous ses trois huniers, son grand 
+                     foc et sa brigantine, mais si lentement et d’une allure si 
+                     triste, que les curieux, avec cet instinct qui pressent un 
+                     malheur, se demandaient quel accident pouvait être arrivé
+                     à bord. Néanmoins les experts en navigation reconnais -
+                     saient que si un accident était arrivé, ce ne pouvait être au 
+                     bâtiment lui-même ; car il marchait lentement, il mar-
+                     chait dans toutes les conditions d’un navire parfaitement 
+                     gouverné.  Son ancre était en mouillage, ses haubans de 
+                     beaupré décrochés ; et près du pilote, qui s’apprêtait à diri-
+                     ger <ref target="#pharaon">Le Pharaon</ref> par l’étroite entrée du port de <placeName ref="#marseille">Marseille</placeName>,
+                     était un <rs type="person" ref="#edmond_dantes">jeune homme</rs> au geste rapide et à l’œil actif qui 
+                     surveillait chaque mouvement du navire et répétait cha-
+                     que ordre du pilote.</p>
+
+                  <p>La vague inquiétude qui planait sur la foule avait parti-
+                     culièrement atteint un des spectateurs de l’esplanade de <placeName ref="#fortsaintjean">Saint-
+                     Jean</placeName>; de sorte qu’il ne put attendre l’entrée du bâtiment 
+                     dans le port, sauta dans une petite barque et ordonna de 
+                     ramer au-devant du <ref target="#pharaon">Pharaon</ref>, qu’il atteignit en face de
+                     l’anse de la réserve.</p>
+
+                  <p>En voyant venir cet homme, <rs type="person" ref="#edmond_dantes">le jeune marin</rs> quitta son 
+                     poste à côté du pilote, et vint, le chapeau à la main, s’ap-
+                     puyer à la muraille du bâtiment. C’était un <rs type="person" ref="#edmond_dantes">jeune homme</rs> de 
+                     vingt ans environ, grand, svelte, avec de beaux yeux noirs 
+                     et des cheveux d’ébène,  il y avait dans toute sa personne 
+                     cet air de calme et de résolution particulier aux hommes
+                     habitués depuis leur enfance à lutter avec le danger.</p>
+
+               </div2>
+         </div1>
+      </body>
+   </text>
+   </TEI>
+   <TEI xmlns="http://www.tei-c.org/ns/1.0">
+      <teiHeader>
+         <fileDesc>
+            <titleStmt>
+               <title type="full">
+                  <title type="book">Le Comte de Monte-Cristo</title>
+                  <title type="chapter">Les Catalans</title>
+               </title>
+            </titleStmt>
+            <publicationStmt>
+               <publisher>Ecole nationale des chartes</publisher>
+               <date when-iso="2023-02">Février 2023</date>
+            </publicationStmt>
+            <sourceDesc>
+               <publisher>Journal des débats politiques et littéraires</publisher>
+               <date when-iso="1844-08-29">29 aout 1844</date>
+               <distributor ref="https://gallica.bnf.fr/ark:/12148/bpt6k446669r/f1.image">Gallica
+                  Bibliothèque nationale de France</distributor> 
+            </sourceDesc>
+         </fileDesc>
+      </teiHeader>
+      <text>
+         <body>
+            <div1 type="book">
+               <head>LE COMTE DE MONTE-CHRISTO.</head>
+               <div2 type="chapter" n="2">
+                 <head>Les Catalans</head>
+                  <p>À cent pas de l’endroit où les deux amis, les regards à 
+                     l’horizon et l’oreille au guet, sablaient le vin pétillant de
+                     Lamalgue, s’élevait, derrière une butte nue et rongée par 
+                     le soleil et le mistral, le petit village des Catalans.</p>
+
+                  <p>Un jour, une colonie mystérieuse partit de
+                     l’<placeName ref="#espagne">Espagne</placeName> et vint aborder à la langue de terre où
+                     elle est encore aujourd’hui. Elle arrivait on ne
+                     savait d’où et parlait une langue inconnue. Un
+                     des chefs, qui entendait le provençal, demanda à
+                     la commune de <placeName ref="#marseille">Marseille</placeName> de leur donner ce
+                     promontoire nu et aride, sur lequel ils venaient,
+                     comme les matelots antiques, de tirer leurs
+                     bâtiments. La demande lui fut accordée, et trois
+                     mois après, autour des douze ou quinze bâtiments
+                     qui avaient amené ces bohémiens de la mer, un
+                     petit village s’élevait.</p>
+
+                  <p>Ce village construit d’une façon bizarre et
+                     pittoresque, moitié maure, moitié espagnol, est
+                     celui que l’on voit aujourd’hui habité par des
+                     descendants de ces hommes, qui parlent la langue
+                     de leurs pères. Depuis trois ou quatre siècles, ils
+                     sont encore demeurés fidèles à ce petit
+                     promontoire, sur lequel ils s’étaient abattus,
+                     pareils à une bande d’oiseaux de mer, sans se
+                     mêler en rien à la population <rs type="city" ref="#marseille">marseillaise</rs>, se
+                     mariant entre eux, et ayant conservé les mœurs et
+                     le costume de leur mère patrie, comme ils en ont
+                     conservé le langage.</p>
+
+                  <p>Il faut que nos lecteurs nous suivent à travers
+                     l’unique rue de ce petit village, et entrent avec
+                     nous dans une de ces maisons auxquelles le soleil
+                     a donné, au-dehors, cette belle couleur feuille
+                     morte particulière aux monuments du pays, et,
+                     au-dedans, une couche de badigeon, cette teinte
+                     blanche qui forme le seul ornement des posadas
+                     espagnoles.</p>
+
+                  <p>Une belle jeune fille aux cheveux noirs
+                     comme le jais, aux yeux veloutés comme ceux de
+                     la gazelle, se tenait debout, adossée à une cloison,
+                     et froissait entre ses doigts effilés et d’un dessin
+                     antique une bruyère innocente dont elle arrachait
+                     les fleurs, et dont les débris jonchaient déjà le
+                     sol ; en outre, ses bras nus jusqu’au coude, ses
+                     bras brunis, mais qui semblaient modelés sur
+                     ceux de la Vénus d’Arles, frémissaient d’une
+                     sorte d’impatience fébrile, et elle frappait la terre
+                     de son pied souple et cambré, de sorte que l’on
+                     entrevoyait la forme pure, fière et hardie de sa
+                     jambe, emprisonnée dans un bas de coton rouge à
+                     coins gris et bleus.</p>
+               </div2>
+            </div1>
+         </body>
+      </text>
+   </TEI>
+   <TEI xmlns="http://www.tei-c.org/ns/1.0">
+      <teiHeader>
+         <fileDesc>
+            <titleStmt>
+               <title type="full">
+                  <title type="book">Le Comte de Monte-Cristo</title>
+                  <title type="chapter">Le repas de fiançailles</title>
+               </title>
+            </titleStmt>
+            <publicationStmt>
+               <publisher>Ecole nationale des chartes</publisher>
+               <date when-iso="2023-02">Février 2023</date>
+            </publicationStmt>
+            <sourceDesc>
+               <publisher>Journal des débats politiques et littéraires</publisher>
+               <date when-iso="1844-O8-31">31 aout 1844</date>
+               <distributor ref="https://gallica.bnf.fr/ark:/12148/bpt6k4466712/f1.image">Gallica
+                  Bibliothèque nationale de France</distributor> 
+            </sourceDesc>
+         </fileDesc>
+      </teiHeader>
+      <text>
+         <body>
+            <div1 type="book">
+               <head>LE COMTE DE MONTE-CHRISTO.</head>
+               <div2 type="chapter" n="3" >
+                  <head>Le repas de fiançailles</head>
+                  <p>Le lendemain fut un beau jour. Le soleil se leva pur et 
+                     brillant, et les premiers rayons d’un rouge pourpre 
+                     diaprèrent de leurs rubis les pointes écumeuses des vagues.
+                     Le repas avait été préparé au premier étage de cette même 
+                     <placeName ref="#reserve">Réserve</placeName>, avec la tonnelle de laquelle nous avons déjà fait 
+                     connaissance. C’était une grande salle éclairée par cinq ou 
+                     six fenêtres, audessus de chacune desquelles (explique le
+                     phénomène qui pourra !) était écrit le nom d’une des grandes 
+                     villes de France. Une balustrade en bois, comme le reste 
+                     du bâtiment, régnait tout le long de ces fenêtres.
+                  </p>
+                  <p>
+                     Quoique le repas ne fût indiqué que pour midi, dès onze 
+                     heures du matin, cette balustrade était chargée de prome-
+                     neurs impatients. C’étaient les marins privilégiés du <ref target="#pharaon">Pha-
+                     raon</ref> et quelques soldats, amis de <persName ref="#edmond_dantes">Dantès</persName>. Tous avaient, pour 
+                     faire honneur aux fiancés, fait voir le jour à leurs plus
+                     belles toilettes. Le bruit circulait, parmi les futurs convi-
+                     ves, que les armateurs du <ref target="#pharaon">Pharaon</ref> devaient honorer de 
+                     leur présence le repas de noces de <rs type="person" ref="#edmond_dantes">leur second</rs> ; mais c’é-
+                     tait de leur part un si grand
+                     honneur accordé à <persName ref="#edmond_dantes">Dantès</persName> 
+                     que personne n’osait y croire. Cependant Danglars, en ar-
+                     rivant avec Caderousse, confirma à son tour cette nouvelle. 
+                     Il avait vu le matin M. Morrel lui-même, et M. Morrel lui 
+                     avait dit qu’il viendrait dîner à la <placeName ref="#reserve">Réserve</placeName>.</p>
+                  <p>En effet, un instant après eux, M. Morrel fit à son tour 
+                     son entrée dans la chambre et fut salué par les matelots 
+                     du <ref target="#pharaon">Pharaon</ref> d’un hourra unanime d’applaudissements. La 
+                     présence de l’armateur était pour eux la confirmation du 
+                     bruit qui courait déjà que Dantès serait nommé capitaine ; 
+                     et comme Dantès était fort aimé à bord, ces braves gens 
+                     remerciaient ainsi l’armateur de ce qu’une fois par hasard 
+                     le choix d'un chef était en harmonie avec les désirs des subor-
+                     données. À peine M. Morrel fut-il entré qu’on dépêcha una-
+                     nimement Danglars et Caderousse vers le fiancé. 
+                  </p>
+               </div2>
+         </div1>
+      </body>
+   </text>
+   </TEI>
+  
+</teiCorpus>
